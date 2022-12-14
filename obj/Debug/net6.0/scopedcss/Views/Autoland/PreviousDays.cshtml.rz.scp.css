@@ -1,0 +1,32 @@
+body[b-ngmhusak9k] {
+    height: 100%;
+}
+.row1[b-ngmhusak9k] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.row2[b-ngmhusak9k] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tablediv[b-ngmhusak9k] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+table[b-ngmhusak9k], th[b-ngmhusak9k], td[b-ngmhusak9k] {
+    border: 2px solid;
+    border-color: black;
+}
+
+th[b-ngmhusak9k] {
+    background-color: blue;
+    color: white;
+}

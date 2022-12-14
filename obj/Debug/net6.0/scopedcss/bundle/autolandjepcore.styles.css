@@ -1,0 +1,125 @@
+/* _content/autolandjepcore/Views/Autoland/Currentday.cshtml.rz.scp.css */
+body[b-1x7d6pc8x1] {
+    height: 100%;
+}
+.row2[b-1x7d6pc8x1] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.row3[b-1x7d6pc8x1] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tablediv[b-1x7d6pc8x1] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+table[b-1x7d6pc8x1], th[b-1x7d6pc8x1], td[b-1x7d6pc8x1] {
+    border: 2px solid;
+    border-color: black;
+}
+
+th[b-1x7d6pc8x1] {
+    background-color: blue;
+    color: white;
+}
+/* _content/autolandjepcore/Views/Autoland/Index.cshtml.rz.scp.css */
+body[b-1fbkvo1jb5] {
+    height: 100%;
+}
+.linkks[b-1fbkvo1jb5] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/* _content/autolandjepcore/Views/Autoland/PreviousDays.cshtml.rz.scp.css */
+body[b-ngmhusak9k] {
+    height: 100%;
+}
+.row1[b-ngmhusak9k] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.row2[b-ngmhusak9k] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tablediv[b-ngmhusak9k] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+table[b-ngmhusak9k], th[b-ngmhusak9k], td[b-ngmhusak9k] {
+    border: 2px solid;
+    border-color: black;
+}
+
+th[b-ngmhusak9k] {
+    background-color: blue;
+    color: white;
+}
+/* _content/autolandjepcore/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-41adavl40y] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-41adavl40y] {
+  color: #0077cc;
+}
+
+.btn-primary[b-41adavl40y] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-41adavl40y], .nav-pills .show > .nav-link[b-41adavl40y] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-41adavl40y] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-41adavl40y] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-41adavl40y] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-41adavl40y] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-41adavl40y] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
