@@ -1,0 +1,162 @@
+﻿@model IEnumerable<autolandjepcore.Models.Result>
+
+@section Scripts{
+
+    <script type="text/javascript">
+
+        $("#start").on('change', function () {
+            window.sessionStorage.setItem("date", this.value);
+        });
+
+        $("#aircraftid").on('change', function () {
+            window.sessionStorage.setItem("airid", this.value);
+        });
+
+        $(document).ready(function () {
+            $("#start").val(window.sessionStorage.getItem("date"));
+        });
+
+        $(document).ready(function () {
+            $("#aircraftid").val(window.sessionStorage.getItem("airid"));
+        });
+
+    </script>
+
+}
+
+@{
+    var air = new List<string>((IEnumerable<string>)TempData["aircraftidpreviousday"]);
+
+}
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+    @using (Html.BeginForm("PreviousDays", "Autoland", FormMethod.Post))
+    {
+        <div class="row1">
+            <div class="col-sm-2">
+                <lable for="form-control1">SELECTDATE:</lable>
+                <input type="date" asp-format="{dd/MM/yyyy}" id="start" name="startdate" />
+            </div>
+
+            <div class="col-sm-1.5">
+                <lable for="form-control4">Aircraft:</lable>
+                <select class="form-control4" name="Aircraftselect" id="aircraftid" asp-items="@(new SelectList(air))">
+                    <option> </option>
+                </select>
+            </div>
+        </div>
+        <div class="row2">
+            <div class="col-sm-3">
+                <input type="submit" value="Submit" id="sinsert" />
+                <a asp-controller="Autoland" asp-action="Index">
+                    <input type="button" value="BACK" />
+                </a>
+            </div>
+        </div>
+    }
+@if (Model != null)
+    {
+        <div class="tablediv">
+            <table class="table" align="center">
+                <thead>
+                    <tr>
+                        <th bgcolor="#00FFFF">
+                            @Html.DisplayNameFor(model => model.Sno)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.date)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.AIRCRAFT)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FltNbr)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.actype)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.sector)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.startdate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.enddate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.sta)
+                        </th>
+                         <th>
+                            @Html.DisplayNameFor(model => model.std)
+                        </th>
+                         <th>
+                            @Html.DisplayNameFor(model => model.autolastperform)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.autovalidupto)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.remarks)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td bgcolor="red">
+                                @Html.DisplayFor(modelItem => item.Sno)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AIRCRAFT)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FltNbr)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.actype)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.sector)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.startdate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.enddate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.std)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.sta)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.autolastperform)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.autovalidupto)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.remarks)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+  </body>
+</html>
+
